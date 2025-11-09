@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Voice Agent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <main class="screen">
+        <header class="hero">
+            <p class="eyebrow">Voice Agent</p>
+            <h1>What would you like to ask?</h1>
+            <p class="subhead">Hit the mic, speak naturally, and I’ll reply out loud.</p>
+        </header>
+
+        <section class="stage">
+            <button id="mic-btn" class="mic-button" type="button">
+                <span class="pulse"></span>
+                <span id="mic-label">Tap to talk</span>
+            </button>
+            <p id="status-text">Idle</p>
+        </section>
+
+        <section class="visually-hidden">
+            <p id="transcript-text"></p>
+            <p id="reply-text"></p>
+            <code id="api-base-display"></code>
+            <button id="api-edit-btn" type="button"></button>
+        </section>
+    </main>
+
+    <template id="toast-template">
+        <div class="toast"></div>
+    </template>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
